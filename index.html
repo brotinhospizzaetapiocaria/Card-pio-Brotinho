@@ -1,0 +1,70 @@
+html lang=en
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleCardápio Brotinhotitle
+
+    !-- Link para o CSS do Bootstrap (via CDN) --
+    link rel=stylesheet href=httpsstackpath.bootstrapcdn.combootstrap4.5.2cssbootstrap.min.css
+
+    !-- Link para o CSS do Swiper (via CDN) --
+    link rel=stylesheet href=httpsunpkg.comswiperswiper-bundle.min.css
+    
+    style
+        body, html {
+            height 100%;
+            margin 0;
+            overflow hidden;
+        }
+
+        .swiper-slide {
+            display flex;
+            align-items center;
+            justify-content center;
+            height 100%;
+        }
+        
+        .swiper-slide img {
+            max-height 100%;
+            max-width 100%;
+            object-fit contain;  Permite que a imagem seja redimensionada enquanto mantém a proporção 
+        }
+    style
+head
+body
+    div class=swiper-container
+        div class=swiper-wrapper
+            !-- Inclua suas imagens aqui --
+            div class=swiper-slideimg src=.pagina1.png alt=Item 1div
+            div class=swiper-slideimg src=.pagina2.png alt=Item 2div
+            div class=swiper-slideimg src=.pagina3.png alt=Item 3div
+            div class=swiper-slideimg src=.pagina4.png alt=Item 4div
+            div class=swiper-slideimg src=.pagina5.png alt=Item 5div
+            div class=swiper-slideimg src=.pagina6.png alt=Item 6div
+            div class=swiper-slideimg src=.pagina7.png alt=Item 7div
+            !-- ... E assim por diante --
+        div
+        
+        !-- Navegação (botões) --
+        div class=swiper-button-nextdiv
+        div class=swiper-button-prevdiv
+    div
+
+    !-- Link para o JavaScript do Swiper (via CDN) --
+    script src=httpsunpkg.comswiperswiper-bundle.min.jsscript
+    
+    script
+         Inicializar o Swiper quando a página estiver pronta
+        document.addEventListener(DOMContentLoaded, function () {
+            var swiper = new Swiper(.swiper-container, {
+                navigation {
+                    nextEl .swiper-button-next,
+                    prevEl .swiper-button-prev,
+                },
+            });
+        });
+    script
+body
+
+html
+
